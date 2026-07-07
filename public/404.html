@@ -49,7 +49,7 @@
     max-width: 420px;
     width: 100%;
   }
-  .mascot { width: 96px; height: 96px; margin: 0 auto 8px; border-radius: var(--radius-pill); animation: bob 3.2s ease-in-out infinite; }
+  .mascot { width: 96px; height: 96px; margin: 0 auto 8px; object-fit: contain; animation: bob 3.2s ease-in-out infinite; }
   @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
   @media (prefers-reduced-motion: reduce) { .mascot { animation: none; } }
   .code {
@@ -94,7 +94,7 @@
 </head>
 <body>
   <main class="card">
-    <img class="mascot" src="/apple-touch-icon.png" alt="">
+    <img class="mascot" src="/panda.png" alt="">
     <div class="code">404</div>
     <p class="headline">This page wandered off.</p>
     <p class="meta">There's nothing at <code id="lost-path">this address</code>.<br>It may have moved, or the link had a typo.</p>

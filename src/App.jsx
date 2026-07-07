@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       <header className="hero">
-        <img className="hero-avatar" src="/apple-touch-icon.png" alt="" />
+        <img className="hero-avatar" src="/panda.png" alt="" />
         <h1 className="hero-name">Alexis Chao</h1>
         <p className="text-body hero-tagline">
           studying cybersecurity · building small archival websites
@@ -49,8 +49,8 @@ function App() {
 
       <footer className="footer">
         <div className="footer-links">
-          <a className="footer-link" href="#">GitHub</a>
-          <a className="footer-link" href="#">LinkedIn</a>
+          <a className="footer-link" href="https://github.com/Chikimiko" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a className="footer-link" href="https://www.linkedin.com/in/alexischao/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
         <p className="text-meta footer-copy">alexischao.com</p>
       </footer>
