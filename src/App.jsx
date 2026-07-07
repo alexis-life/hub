@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       <header className="hero">
-        <img className="hero-avatar" src="/panda.png" alt="" />
+        <img className="hero-avatar" src="/avatar.png" alt="" />
         <h1 className="hero-name">Alexis Chao</h1>
         <p className="text-body hero-tagline">
           studying cybersecurity · building small archival websites
