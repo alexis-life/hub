@@ -1,0 +1,9 @@
+[
+  { "name": "anime", "url": "https://anime.alexischao.com", "description": "my AniList anime list", "status": "live" },
+  { "name": "cysa", "url": "https://cysa.alexischao.com", "description": "CySA+ study tracker", "status": "live" },
+  { "name": "data", "url": "https://data.alexischao.com", "description": "movie reviews & collection", "status": "live" },
+  { "name": "budget", "url": "https://budget.alexischao.com", "description": "finances", "status": "live" },
+  { "name": "map", "url": "https://map.alexischao.com", "description": "places visited & wishlisted", "status": "in progress" },
+  { "name": "threats", "url": "https://threats.alexischao.com", "description": "CVEs & incidents worth remembering", "status": "planned" },
+  { "name": "toolkit", "url": "https://toolkit.alexischao.com", "description": "security commands cheat sheet", "status": "planned" }
+]
