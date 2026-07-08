@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>kitchen sink · alexischao.com theme</title>
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/theme.css?v=2.0.0">
+<style>
+  .ks-section { max-width: 1200px; margin: 0 auto; padding: 32px var(--content-pad); }
+  .ks-section + .ks-section { padding-top: 0; }
+  .ks-section h2 { margin-bottom: 16px; }
+  .ks-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
+  .ks-stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+  .ks-card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+</style>
+</head>
+<body>
+
+  <header class="ax-header">
+    <div class="ax-header-titles">
+      <h1 class="ax-title">kitchen sink</h1>
+      <p class="ax-subtitle">theme.css v2.0.0 — visual reference</p>
+    </div>
+    <div class="ax-header-actions">
+      <a class="ax-btn" href="#tabs">Outline button</a>
+      <a class="ax-btn ax-btn--solid" href="#tabs">Solid button</a>
+    </div>
+    <div class="ax-tabs-row" id="tabs">
+      <div class="ax-tabs-inner">
+        <nav class="ax-tabs">
+          <button class="ax-tab ax-tab--active">All</button>
+          <button class="ax-tab">Cards</button>
+          <button class="ax-tab">Stats</button>
+          <button class="ax-tab">Inputs</button>
+        </nav>
+        <input class="ax-input" type="search" placeholder="Search…" style="margin-left:auto; min-width:180px;">
+      </div>
+    </div>
+  </header>
+
+  <section class="ks-section">
+    <h2>Section bars</h2>
+    <div class="ks-row">
+      <div class="ax-section-bar" style="flex:1;">Primary section bar</div>
+    </div>
+    <div class="ks-row">
+      <div class="ax-section-bar ax-section-bar--light" style="flex:1;">Secondary section bar</div>
+    </div>
+  </section>
+
+  <section class="ks-section">
+    <h2>Stat cards</h2>
+    <div class="ks-stat-grid">
+      <div class="ax-stat">
+        <div class="ax-stat-value">128</div>
+        <div class="ax-stat-label">Total items</div>
+      </div>
+      <div class="ax-stat ax-stat--sp2">
+        <div class="ax-stat-value">42</div>
+        <div class="ax-stat-label">In progress</div>
+      </div>
+      <div class="ax-stat ax-stat--sp3">
+        <div class="ax-stat-value">9</div>
+        <div class="ax-stat-label">Flagged</div>
+      </div>
+      <div class="ax-stat ax-stat--sp4">
+        <div class="ax-stat-value">77%</div>
+        <div class="ax-stat-label">Completion</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ks-section">
+    <h2>Cards</h2>
+    <div class="ks-card-grid">
+      <div class="ax-card">
+        <h3>Card title</h3>
+        <p class="ax-meta">Supporting meta text sits below the heading, 12–13px, in a muted rose.</p>
+      </div>
+      <div class="ax-card">
+        <h3>Another card</h3>
+        <p>Body copy at 14–15px, warm brown-rose, never pure black. Poppins throughout.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ks-section">
+    <h2>Badges &amp; chips</h2>
+    <div class="ks-row">
+      <span class="ax-badge">live</span>
+      <span class="ax-badge">planned</span>
+      <span class="ax-chip">chip label</span>
+      <span class="ax-chip">another chip</span>
+    </div>
+  </section>
+
+  <section class="ks-section">
+    <h2>Inputs</h2>
+    <div class="ks-row">
+      <input class="ax-input" type="search" placeholder="Search…">
+      <input class="ax-input" type="text" placeholder="Text input">
+    </div>
+  </section>
+
+  <section class="ks-section">
+    <h2>Empty state</h2>
+    <div class="ax-card">
+      <div class="ax-empty">No results match your filters.</div>
+    </div>
+  </section>
+
+</body>
+</html>

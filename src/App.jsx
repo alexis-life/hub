@@ -7,24 +7,24 @@ function SiteCard({ site }) {
     <>
       <div className="site-card-top">
         <span className="site-card-name">{site.name}</span>
-        <span className={`badge status-${site.status.replace(' ', '-')}`}>
+        <span className={`ax-badge status-${site.status.replace(' ', '-')}`}>
           {site.status}
         </span>
       </div>
-      <p className="text-body site-card-desc">{site.description}</p>
+      <p className="site-card-desc">{site.description}</p>
     </>
   )
 
   if (clickable) {
     return (
-      <a className="card site-card site-card-clickable" href={site.url}>
+      <a className="ax-card site-card site-card-clickable" href={site.url}>
         {content}
       </a>
     )
   }
 
   return (
-    <div className="card site-card site-card-muted">
+    <div className="ax-card site-card site-card-muted">
       {content}
     </div>
   )
@@ -36,7 +36,7 @@ function App() {
       <header className="hero">
         <img className="hero-avatar" src="/avatar.png" alt="" />
         <h1 className="hero-name">Alexis Chao</h1>
-        <p className="text-body hero-tagline">
+        <p className="hero-tagline">
           studying cybersecurity · building small archival websites
         </p>
       </header>
@@ -52,7 +52,7 @@ function App() {
           <a className="footer-link" href="https://github.com/Chikimiko" target="_blank" rel="noopener noreferrer">GitHub</a>
           <a className="footer-link" href="https://www.linkedin.com/in/alexischao/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
-        <p className="text-meta footer-copy">alexischao.com</p>
+        <p className="ax-meta footer-copy">alexischao.com</p>
       </footer>
     </>
   )

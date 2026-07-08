@@ -17,6 +17,7 @@
 
 .hero-tagline {
   color: var(--c7);
+  font-size: 0.9rem;
 }
 
 .site-grid {
