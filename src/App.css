@@ -71,6 +71,11 @@
   color: var(--c6);
 }
 
+.status-staging {
+  background: var(--c3);
+  color: var(--c8);
+}
+
 .status-in-progress {
   background: var(--c5);
   color: #fff;

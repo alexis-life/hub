@@ -9,10 +9,10 @@ This repo is also the **canonical host for `theme.css`**, served at `https://ale
 Edit `src/data/sites.json` — one object per site:
 
 ```json
-{ "name": "map", "url": "https://map.alexischao.com", "description": "places visited & wishlisted", "status": "in progress" }
+{ "name": "map", "url": "https://map.alexischao.com", "description": "places visited & wishlisted", "status": "staging" }
 ```
 
-`status` is one of `live`, `in progress`, or `planned`. `planned` cards render but aren't clickable.
+`status` is one of `live`, `staging`, `in progress`, or `planned`. `staging` is for sites that are deployed and clickable but still running on placeholder/dummy data. `planned` cards render but aren't clickable.
 
 This file is also the target of the external `vault-sync` script's "hub" job — don't rename it or move it out of `src/data/`.
 

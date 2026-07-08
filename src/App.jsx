@@ -2,7 +2,7 @@ import sites from './data/sites.json'
 import './App.css'
 
 function SiteCard({ site }) {
-  const clickable = site.status === 'live' || site.status === 'in progress'
+  const clickable = site.status === 'live' || site.status === 'staging' || site.status === 'in progress'
   const content = (
     <>
       <div className="site-card-top">
