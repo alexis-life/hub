@@ -15,20 +15,26 @@
 
 <link rel="stylesheet" href="/theme.css?v=2.0.0">
 <style>
-  .ks-section { max-width: 1200px; margin: 0 auto; padding: 32px var(--content-pad); }
-  .ks-section + .ks-section { padding-top: 0; }
-  .ks-section h2 { margin-bottom: 16px; }
+  .ks-section { max-width: 1200px; margin: 0 auto; padding: 28px var(--content-pad); }
+  .ks-section h2 { margin-bottom: 14px; }
   .ks-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 12px; }
-  .ks-stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
-  .ks-card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .ks-stat-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; padding: 0 20px 20px; }
+  .ks-poster-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; }
+  .ks-poster { background: var(--bg-surface); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+  .ks-poster-art { aspect-ratio: 2/3; background: linear-gradient(160deg, var(--c2), var(--c5)); }
+  .ks-poster-title { padding: 8px 10px; font-size: 0.78rem; font-weight: 600; color: var(--c9); }
+  .ks-profile-top { display: flex; align-items: center; gap: 14px; padding: 20px 20px 16px; }
+  .ks-avatar { width: 56px; height: 56px; border-radius: var(--radius-md); background: var(--c1); flex-shrink: 0; }
+  .ks-profile-name { font-size: 1rem; font-weight: 700; color: var(--c9); }
+  @media (max-width: 640px) { .ks-stat-grid { grid-template-columns: repeat(3, 1fr); } }
 </style>
 </head>
 <body>
 
   <header class="ax-header">
     <div class="ax-header-titles">
-      <h1 class="ax-title">kitchen sink</h1>
-      <p class="ax-subtitle">theme.css v2.0.0 — visual reference</p>
+      <h1 class="ax-title">Kitchen Sink</h1>
+      <p class="ax-subtitle">theme.css v2.0.0 — visual reference, styled after anime.alexischao.com</p>
     </div>
     <div class="ax-header-actions">
       <a class="ax-btn" href="#tabs">Outline button</a>
@@ -37,7 +43,7 @@
     <div class="ax-tabs-row" id="tabs">
       <div class="ax-tabs-inner">
         <nav class="ax-tabs">
-          <button class="ax-tab ax-tab--active">All</button>
+          <button class="ax-tab ax-tab--active">Overview 585</button>
           <button class="ax-tab">Cards</button>
           <button class="ax-tab">Stats</button>
           <button class="ax-tab">Inputs</button>
@@ -48,47 +54,89 @@
   </header>
 
   <section class="ks-section">
-    <h2>Section bars</h2>
-    <div class="ks-row">
-      <div class="ax-section-bar" style="flex:1;">Primary section bar</div>
-    </div>
-    <div class="ks-row">
-      <div class="ax-section-bar ax-section-bar--light" style="flex:1;">Secondary section bar</div>
+    <h2>Profile card with stat pills</h2>
+    <div class="ax-card" style="padding: 0;">
+      <div class="ks-profile-top">
+        <div class="ks-avatar"></div>
+        <span class="ks-profile-name">Chikimiko</span>
+      </div>
+      <div class="ks-stat-grid">
+        <div class="ax-stat">
+          <div class="ax-stat-value">441</div>
+          <div class="ax-stat-label">Total items</div>
+        </div>
+        <div class="ax-stat">
+          <div class="ax-stat-value">136.7</div>
+          <div class="ax-stat-label">Days</div>
+        </div>
+        <div class="ax-stat">
+          <div class="ax-stat-value">80.95</div>
+          <div class="ax-stat-label">Mean score</div>
+        </div>
+        <div class="ax-stat">
+          <div class="ax-stat-value">153</div>
+          <div class="ax-stat-label">Total manga</div>
+        </div>
+        <div class="ax-stat">
+          <div class="ax-stat-value">17146</div>
+          <div class="ax-stat-label">Chapters</div>
+        </div>
+        <div class="ax-stat">
+          <div class="ax-stat-value">90.75</div>
+          <div class="ax-stat-label">Manga score</div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="ks-section">
-    <h2>Stat cards</h2>
-    <div class="ks-stat-grid">
-      <div class="ax-stat">
-        <div class="ax-stat-value">128</div>
-        <div class="ax-stat-label">Total items</div>
+    <h2>Stat cards — bordered variant</h2>
+    <p class="ax-meta" style="margin-bottom: 12px;">Standalone white cards with a colored left border (cysa pattern) — use when stats aren't grouped inside a card.</p>
+    <div class="ks-row" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px;">
+      <div class="ax-stat ax-stat--bordered">
+        <div class="ax-stat-value">0</div>
+        <div class="ax-stat-label">Answered</div>
       </div>
-      <div class="ax-stat ax-stat--sp2">
-        <div class="ax-stat-value">42</div>
-        <div class="ax-stat-label">In progress</div>
+      <div class="ax-stat ax-stat--bordered ax-stat--sp2">
+        <div class="ax-stat-value">0</div>
+        <div class="ax-stat-label">Correct</div>
       </div>
-      <div class="ax-stat ax-stat--sp3">
-        <div class="ax-stat-value">9</div>
-        <div class="ax-stat-label">Flagged</div>
+      <div class="ax-stat ax-stat--bordered ax-stat--sp3">
+        <div class="ax-stat-value">—</div>
+        <div class="ax-stat-label">Overall</div>
       </div>
-      <div class="ax-stat ax-stat--sp4">
-        <div class="ax-stat-value">77%</div>
-        <div class="ax-stat-label">Completion</div>
-      </div>
+    </div>
+  </section>
+
+  <section class="ks-section">
+    <h2>Continue Watching</h2>
+    <div class="ks-poster-grid">
+      <div class="ks-poster"><div class="ks-poster-art"></div><div class="ks-poster-title">Title one</div></div>
+      <div class="ks-poster"><div class="ks-poster-art"></div><div class="ks-poster-title">Title two</div></div>
+      <div class="ks-poster"><div class="ks-poster-art"></div><div class="ks-poster-title">Title three</div></div>
+      <div class="ks-poster"><div class="ks-poster-art"></div><div class="ks-poster-title">Title four</div></div>
+    </div>
+  </section>
+
+  <section class="ks-section">
+    <h2>Segmented toggle</h2>
+    <p class="ax-meta" style="margin-bottom: 12px;">The "by domain / by objective" pattern — a filled active segment next to a light inactive one, not a page section header.</p>
+    <div class="ks-row" style="gap: 6px;">
+      <div class="ax-section-bar" style="flex:1;">By domain</div>
+      <div class="ax-section-bar ax-section-bar--light" style="flex:1;">By objective</div>
     </div>
   </section>
 
   <section class="ks-section">
     <h2>Cards</h2>
-    <div class="ks-card-grid">
+    <div class="ks-row" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
       <div class="ax-card">
         <h3>Card title</h3>
-        <p class="ax-meta">Supporting meta text sits below the heading, 12–13px, in a muted rose.</p>
+        <p class="ax-meta">Supporting meta text sits below the heading, ~13px, muted rose.</p>
       </div>
       <div class="ax-card">
         <h3>Another card</h3>
-        <p>Body copy at 14–15px, warm brown-rose, never pure black. Poppins throughout.</p>
+        <p>Body copy at 14px, warm brown-rose, never pure black. Poppins throughout.</p>
       </div>
     </div>
   </section>

@@ -51,12 +51,11 @@
   --shadow-popover: 0 4px 16px rgba(122, 35, 72, 0.12);
 
   /* ── Type scale ────────────────────────────────────── */
-  --fs-title: 1.7rem;    /* ~27px page/site title */
-  --fs-subtitle: 0.75rem; /* ~12px uppercase subtitle */
+  --fs-title: 1.15rem;    /* ~18px header/page title */
   --fs-body: 0.9rem;      /* ~14px body text */
-  --fs-meta: 0.8rem;      /* ~13px meta text */
-  --fs-tab: 0.85rem;      /* ~13-14px nav tabs */
-  --fs-stat: 2rem;        /* big stat numbers */
+  --fs-meta: 0.8rem;      /* ~13px meta/subtitle text */
+  --fs-tab: 0.75rem;      /* ~12px nav tabs */
+  --fs-stat: 1.4rem;      /* stat pill numbers */
   --fs-label: 0.7rem;     /* micro uppercase labels */
 
   /* ── Semantic (from cysa quiz states) ─────────────── */
@@ -76,9 +75,9 @@ body {
 }
 
 /* ── Typography scale ──────────────────────────────── */
-h1 { font-size: 1.7rem; font-weight: 700; color: var(--c9); letter-spacing: -0.01em; }
-h2 { font-size: 1.3rem; font-weight: 700; color: var(--c9); letter-spacing: -0.01em; }
-h3 { font-size: 1.05rem; font-weight: 600; color: var(--c9); }
+h1 { font-size: 1.15rem; font-weight: 700; color: var(--c9); letter-spacing: -0.01em; }
+h2 { font-size: 1.15rem; font-weight: 700; color: var(--c8); }
+h3 { font-size: 1rem; font-weight: 600; color: var(--c9); }
 p  { font-size: var(--fs-body); color: var(--c9); }
 
 .title-lg        { font-size: 1.1rem; font-weight: 700; color: var(--c9); letter-spacing: -0.01em; }
@@ -298,7 +297,7 @@ tbody tr:hover td { background: var(--bg-hover); }
 }
 
 .ax-title {
-  font-size: var(--fs-title);
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--c9);
   letter-spacing: -0.01em;
@@ -306,11 +305,10 @@ tbody tr:hover td { background: var(--bg-hover); }
 }
 
 .ax-subtitle {
-  font-size: var(--fs-subtitle);
-  font-weight: 600;
-  color: var(--c6);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--c7);
+  margin-top: 2px;
 }
 
 .ax-header-actions {
@@ -348,10 +346,10 @@ tbody tr:hover td { background: var(--bg-hover); }
   flex-shrink: 0;
   background: none;
   border: none;
-  border-bottom: 3px solid transparent;
+  border-bottom: 2px solid transparent;
   color: var(--c7);
   font-family: 'Poppins', sans-serif;
-  font-size: var(--fs-tab);
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -379,10 +377,10 @@ tbody tr:hover td { background: var(--bg-hover); }
   border-radius: var(--radius-pill);
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  padding: 9px 18px;
+  padding: 7px 16px;
   cursor: pointer;
   text-decoration: none;
   transition: border-color 0.15s ease, color 0.15s ease;
@@ -404,23 +402,32 @@ tbody tr:hover td { background: var(--bg-hover); }
   padding: 20px 24px;
 }
 
-/* ── Stat card ─────────────────────────────────────── */
+/* ── Stat pill (default — cards/tiles inside an .ax-card,
+   e.g. profile summary numbers) ───────────────────── */
 .ax-stat {
-  background: var(--bg-surface);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  border-left: 4px solid var(--c6);
-  padding: 18px 20px;
+  background: var(--bg-hover);
+  border-radius: var(--radius-md);
+  padding: 12px 8px;
   text-align: center;
 }
-.ax-stat--sp2 { border-left-color: var(--c5); }
-.ax-stat--sp3 { border-left-color: var(--c4); }
-.ax-stat--sp4 { border-left-color: var(--c3); }
+
+/* Alternate: standalone white stat card with a colored left
+   border accent (used when stats aren't grouped inside a card) */
+.ax-stat--bordered {
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--c6);
+  box-shadow: var(--shadow);
+  padding: 12px 10px;
+}
+.ax-stat--bordered.ax-stat--sp2 { border-left-color: var(--c5); }
+.ax-stat--bordered.ax-stat--sp3 { border-left-color: var(--c4); }
+.ax-stat--bordered.ax-stat--sp4 { border-left-color: var(--c3); }
 
 .ax-stat-value {
-  font-size: var(--fs-stat);
+  font-size: 1.4rem;
   font-weight: 700;
-  color: var(--c9);
+  color: var(--c6);
   line-height: 1.1;
 }
 
@@ -430,21 +437,24 @@ tbody tr:hover td { background: var(--bg-hover); }
   font-weight: 600;
   color: var(--c7);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
 }
 
-/* ── Section bar ───────────────────────────────────── */
+/* ── Segmented toggle (cysa "by domain / by objective" pattern) ──
+   A row of pill-adjacent buttons, one active/filled. Not a page
+   section header — use a plain <h2>/<h3> for those (see below). */
 .ax-section-bar {
   display: flex;
   align-items: center;
+  justify-content: center;
   background: var(--c6);
   color: #fff;
-  border-radius: var(--radius-pill);
-  padding: 10px 20px;
-  font-size: 0.75rem;
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
 }
 
 .ax-section-bar--light {
