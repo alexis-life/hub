@@ -4,5 +4,6 @@
   { "name": "data", "url": "https://data.alexischao.com", "description": "movie reviews & collection", "status": "live" },
   { "name": "map", "url": "https://map.alexischao.com", "description": "places visited & wishlisted", "status": "staging" },
   { "name": "threats", "url": "https://threats.alexischao.com", "description": "CVEs & incidents worth remembering", "status": "staging" },
-  { "name": "toolkit", "url": "https://toolkit.alexischao.com", "description": "security commands cheat sheet", "status": "staging" }
+  { "name": "toolkit", "url": "https://toolkit.alexischao.com", "description": "security commands cheat sheet", "status": "staging" },
+  { "name": "uma", "url": "https://uma.alexischao.com", "description": "Uma Musume trainee roster & race planner", "status": "live" }
 ]
