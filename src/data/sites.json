@@ -3,8 +3,8 @@
   { "name": "cysa", "url": "https://cysa.alexischao.com", "description": "CySA+ study tracker", "status": "live" },
   { "name": "data", "url": "https://data.alexischao.com", "description": "movie reviews & collection", "status": "live" },
   { "name": "map", "url": "https://map.alexischao.com", "description": "places visited & wishlisted", "status": "staging" },
-  { "name": "spots", "url": "https://spots.alexischao.com", "description": "SPOTS daily color-guessing tracker", "status": "live" },
-  { "name": "threats", "url": "https://threats.alexischao.com", "description": "CVEs & incidents worth remembering", "status": "staging" },
+  { "name": "dailies", "url": "https://dailies.alexischao.com", "description": "daily puzzle results & streaks", "status": "live" },
   { "name": "toolkit", "url": "https://toolkit.alexischao.com", "description": "security commands cheat sheet", "status": "staging" },
-  { "name": "uma", "url": "https://uma.alexischao.com", "description": "Uma Musume trainee roster & race planner", "status": "live" }
+  { "name": "uma", "url": "https://uma.alexischao.com", "description": "Uma Musume trainee roster & race planner", "status": "live" },
+  { "name": "threats", "url": "https://threats.alexischao.com", "description": "CVEs & incidents worth remembering", "status": "staging" }
 ]
